@@ -14,15 +14,6 @@ export const listItems = [
 ];
 export const moreListItems = [
   {
-    title: "Creativity:",
-    text: "We thrive on bringing new ideas and perspectives into everything we create.",
-  },
-  {
-    title: "Authenticity:",
-    text: "We are committed to offering content that is real, honest, and relevant.",
-  },
-  {
-    title: "Inspiration:",
-    text: "We aim to inspire and encourage our readers to live their best lives, both personally and professionally, by offering them the tools, resources.",
+  
   },
 ];

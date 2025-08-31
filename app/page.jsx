@@ -1,28 +1,31 @@
 import Footer1 from "@/components/footers/Footer1";
-import Header1 from "@/components/headers/Header1";
-import Cta from "@/components/homes/home-1/Cta";
-import EditorsPic from "@/components/homes/home-1/EditorsPic";
-import Hero from "@/components/homes/home-1/Hero";
-import HighlightPosts from "@/components/homes/home-1/HighlightPosts";
-import LatestPosts from "@/components/homes/home-1/LatestPosts";
-import PopularBlogs from "@/components/homes/home-1/PopularBlogs";
+import Header2 from "@/components/headers/Header2";
+import Categories from "@/components/homes/home-2/Categories";
+import Cta from "@/components/homes/home-2/Cta";
+import Hero from "@/components/homes/home-2/Hero";
+import HighlightPosts from "@/components/homes/home-2/HighlightPosts";
+import InstagramPosts from "@/components/homes/home-2/InstagramPosts";
+import LatestPosts from "@/components/homes/home-2/LatestPosts";
+import PopularBlogs from "@/components/homes/home-2/PopularBlogs";
+import React from "react";
 export const metadata = {
-  title: "Home || Drozy - Modern Blog & Magazine React Nextjs Template",
-  description: "Drozy - Modern Blog & Magazine React Nextjs Template",
+  title: "Home || VBooks - Vaishal’s World of Words",
+  description: "VBooks - Vaishal’s World of Words",
 };
-export default function Home() {
+export default function page() {
   return (
     <>
-      <Header1 />
+      <Header2 />
       <Hero />
       <div className="main-content">
+        <Categories />
         <PopularBlogs />
-        <EditorsPic />
+        <Cta />
         <LatestPosts />
         <HighlightPosts />
-        <Cta />
+        <InstagramPosts />
       </div>
-      <Footer1 />
+      <Footer1 type={2} parentClass="tf-container w-xxl tf-spacing-8 pt-0" />
     </>
   );
 }

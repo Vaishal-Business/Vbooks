@@ -1,5 +1,5 @@
 export const quickLinks = [
-  { label: "Homepage", href: "/" },
+  { label: "Homepage", href: "/homepage-2" },
   { label: "About Us", href: "/about" },
   { label: "Contact Us", href: "/contact" },
   { label: "Our Store", href: "/about" },
