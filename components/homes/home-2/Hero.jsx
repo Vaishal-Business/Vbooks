@@ -151,7 +151,7 @@ export default function Hero() {
           </div>
           <div className="col-lg-3">
             <div className="box-author style-1 v2 text-center">
-              <h5 className="heading-title">Wellcome To Drozy</h5>
+              <h5 className="heading-title">Welcome To VBooks</h5>
               <div className="info">
                 <div className="avatar mb_12">
                   <Image
@@ -163,10 +163,10 @@ export default function Hero() {
                 </div>
                 <h4 className="mb_4">
                   <a href="#" className="link">
-                    Emma Carson
+                    Vaishal
                   </a>
                 </h4>
-                <p className="text-body-1">Portland, Oregon, USA</p>
+                <p className="text-body-1">Dubai, UAE</p>
               </div>
               <ul className="social">
                 <li className="h6 fw-7 text_on-surface-color">

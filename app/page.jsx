@@ -11,6 +11,9 @@ import React from "react";
 export const metadata = {
   title: "Home || VBooks - Vaishal’s World of Words",
   description: "VBooks - Vaishal’s World of Words",
+  icons: {
+    icon: "./images/logo/favicon.svg",
+  },
 };
 export default function page() {
   return (
