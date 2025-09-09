@@ -142,7 +142,7 @@ export default function Footer1({
           {!(type == 3) ? (
             <div className="footer-newsletter footer-item">
               <h6 className="footer-title mb_20">
-                Subscribe for all the top news!
+                Subscribe for all the top stories!
               </h6>
               <NewsLetterForm />
               <div className="box-fieldset-item d-flex">
@@ -168,7 +168,7 @@ export default function Footer1({
         </div>
         <div className="footer-bottom d-flex align-items-center justify-content-between">
           <p className="text-caption-1">
-            {new Date().getFullYear()} Drozy. All Rights Reserved.
+            {new Date().getFullYear()} VBooks. All Rights Reserved.
           </p>
           <ul className="list d-flex">
             {policies.map((item, index) => (

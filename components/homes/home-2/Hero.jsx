@@ -188,7 +188,7 @@ export default function Hero() {
                   </a>
                 </li>
               </ul>
-              <p>Lifestyle blogger who writes about mindful living.</p>
+              <p>Crafting code and stories with equal passion.</p>
             </div>
           </div>
         </div>

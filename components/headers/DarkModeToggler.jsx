@@ -2,33 +2,35 @@
 import React, { useState, useEffect } from "react";
 
 export default function DarkModeToggler() {
-  // Initialize state from localStorage or default to false
   const [show, setShow] = useState(false);
+
+  // Default to dark mode if no preference is saved
   const [darkMode, setDarkMode] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("darkMode") === "true";
+      const saved = localStorage.getItem("darkMode");
+      const mode = saved !== null ? saved === "true" : true; // default dark
+      if (mode) document.body.classList.add("dark-mode"); // Apply immediately
+      return mode;
     }
-    return false;
+    return true;
   });
 
   const toggleMode = () => {
     setDarkMode((prev) => {
       const newMode = !prev;
       localStorage.setItem("darkMode", newMode);
+      if (newMode) {
+        document.body.classList.add("dark-mode");
+      } else {
+        document.body.classList.remove("dark-mode");
+      }
       return newMode;
     });
   };
-  useEffect(() => {
-    setShow(true);
-  }, []);
 
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }, [darkMode]);
+    setShow(true); // show toggle after mount
+  }, []);
 
   return (
     <>

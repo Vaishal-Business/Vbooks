@@ -9,24 +9,23 @@ const contactItems = [
   {
     title: "Address:",
     lines: [
-      "2163 Phillips Gap Rd",
-      "West Jefferson, North Carolina(NC), 28694",
+      "Al Quoz 1, Dubai",
+      "United Arab Emirates",
     ],
   },
   {
     title: "Information:",
     lines: [
-      "+1 666 8888",
       <a key="email" href="#" className="link">
-        themesflat@gmail.com
+        vaishal.vbooks@gmail.com
       </a>,
     ],
   },
   {
     title: "Opentime:",
     lines: [
-      "Monday - Friday: 08:00 - 20:00",
-      "Saturday - Sunday: 10:00 - 18:00",
+      "Monday - Friday: 4:00pm - 6:00pm",
+      "Saturday - Sunday: OFF",
     ],
   },
   {
@@ -41,8 +40,11 @@ const contactItems = [
   },
 ];
 export const metadata = {
-  title: "Contact || Drozy - Modern Blog & Magazine React Nextjs Template",
-  description: "Drozy - Modern Blog & Magazine React Nextjs Template",
+  title: "Home | VBooks - Vaishal’s World of Words",
+  description: "VBooks - Vaishal’s World of Words",
+  icons: {
+    icon: "./images/logo/favicon.svg",
+  },
 };
 export default function page() {
   return (
@@ -118,7 +120,7 @@ export default function page() {
               <div className="col-lg-6 offset-lg-1">
                 <div className="heading-section mb_32">
                   <h2 className="mb_16">Drop Us A line</h2>
-                  <p>Use the form below to get in touch with the sales team.</p>
+                  <p>Use the form below to get in touch with the me.</p>
                 </div>
                 <Contact />
               </div>
