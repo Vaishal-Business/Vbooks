@@ -12,7 +12,9 @@ export default function Contact() {
   const generateToken = (token) => {
     let secret = "";
     for (let i = 0; i < token.length; i++) {
-      secret += String.fromCharCode(token.charCodeAt(i) ^ ((i + 7) % 13 + 17));
+      secret += String.fromCharCode(
+        token.charCodeAt(i) ^ (((i + 7) % 13) + 17),
+      );
     }
     return secret + Date.now().toString().slice(-4);
   };
@@ -72,11 +74,14 @@ export default function Contact() {
     const payload = { name, email, phone, message };
 
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbzEwO800dnn50PD0rDeWptrU3DfTUeJY4MwiGwjbYDSky99kDuBK18RQib8CDdCLs5J/exec", {
-        method: "POST",
-        body: JSON.stringify(payload),
-        headers: { "Content-Type": "application/json" },
-      });
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzEwO800dnn50PD0rDeWptrU3DfTUeJY4MwiGwjbYDSky99kDuBK18RQib8CDdCLs5J/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(payload),
+          headers: { "Content-Type": "application/json" },
+        },
+      );
 
       const result = await response.json();
       if (result.status === "success") {
@@ -99,31 +104,61 @@ export default function Contact() {
       <div className="wrap">
         <div className="tf-grid-layout md-col-2 mb_20">
           <fieldset>
-            <label htmlFor="name" className="text-body-1 mb_8 text_on-surface-color">
+            <label
+              htmlFor="name"
+              className="text-body-1 mb_8 text_on-surface-color"
+            >
               Full Name *
             </label>
-            <input id="name" type="text" placeholder="Your Name" name="name" required />
+            <input
+              id="name"
+              type="text"
+              placeholder="Your Name"
+              name="name"
+              required
+            />
           </fieldset>
           <fieldset>
-            <label htmlFor="email" className="text-body-1 mb_8 text_on-surface-color">
+            <label
+              htmlFor="email"
+              className="text-body-1 mb_8 text_on-surface-color"
+            >
               Email *
             </label>
-            <input id="email" type="email" placeholder="Your Email" name="email" required />
+            <input
+              id="email"
+              type="email"
+              placeholder="Your Email"
+              name="email"
+              required
+            />
           </fieldset>
         </div>
 
         <fieldset>
-          <label htmlFor="phone" className="text-body-1 mb_8 text_on-surface-color">
+          <label
+            htmlFor="phone"
+            className="text-body-1 mb_8 text_on-surface-color"
+          >
             Phone (Optional)
           </label>
           <input id="phone" type="text" placeholder="Phone" name="phone" />
         </fieldset>
 
         <fieldset>
-          <label htmlFor="message" className="text-body-1 mb_12 text_on-surface-color">
+          <label
+            htmlFor="message"
+            className="text-body-1 mb_12 text_on-surface-color"
+          >
             Message *
           </label>
-          <textarea id="message" rows={4} placeholder="Write your message" name="message" required />
+          <textarea
+            id="message"
+            rows={4}
+            placeholder="Write your message"
+            name="message"
+            required
+          />
         </fieldset>
 
         <div className="captcha-container mb_20">
