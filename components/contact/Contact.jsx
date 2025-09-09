@@ -83,7 +83,10 @@ export default function Contact() {
         },
       );
 
-      const result = await response.json();
+      // Read text instead of expecting JSON directly
+      const text = await response.text();
+      const result = JSON.parse(text); // Now parse the text into JSON
+
       if (result.status === "success") {
         alert("Form submitted successfully!");
         form.reset();
@@ -97,7 +100,7 @@ export default function Contact() {
       console.error(err);
       alert("Error submitting form");
     }
-  };
+
 
   return (
     <form className="form-contact" onSubmit={handleSubmit}>
